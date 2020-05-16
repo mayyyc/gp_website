@@ -1,0 +1,27 @@
+{
+  "name": "gp_website",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/MMMayC/gp_website.git",
+  "author": "Mayonnaise",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "postcss-cli": "^7.1.1",
+    "serve": "^11.3.0"
+  },
+  "scripts": {
+    "server": "serve --listen 3000",
+    "watch": "nodemon -e html,scss -x \"yarn css\"",
+    "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 scss -o assets/css/",
+    "css-prefix": "postcss --replace assets/css/custom.css --use autoprefixer --map",
+    "css": "npm run css-compile && npm run css-prefix"
+  }
+}

@@ -1,0 +1,19 @@
+// Customize theme colors
+$body-color: purple;
+$body-bg: #f5f5f5;
+$primary: #607f6e;
+$secondary: #f2f1df;
+
+//
+// Bring in Bootstrap
+//
+
+@import "bootstrap/scss/bootstrap";
+
+//
+// Custom styles
+//
+
+body {
+  padding: 3rem;
+}
